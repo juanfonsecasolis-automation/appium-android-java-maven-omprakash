@@ -2,8 +2,15 @@
 Repository for the course https://www.udemy.com/course/the-complete-appium-course-for-ios-and-android/
 
 ## Set up
-1. Install Android Studio
-1. Install Appium
+
+### Android Studio
+1. Download Android Studio from https://developer.android.com/studio/install and follow the instructions to install it.
+1. Add an Android Studio desktop entry by running `/usr/local/android-studio/bin/studio.sh` and selecting the gear icon > create desktop entry. 
+
+### Kernel Virtual Machine (KVM) Accelerator
+1. Follow the instructions on https://developer.android.com/studio/run/emulator-acceleration#vm-linux
+
+### Appium
 ```
 apt-get install nodejs
 apt-get install npm
@@ -17,12 +24,12 @@ appium driver install uiautomator2
 ```
 mkdir /usr/local/appium-inspector
 mv Appium-Inspector-2024.9.1-linux-x86_64.AppImage /usr/local/appium-inspector/appium-inspector.AppImage
-/usr/local/appium-inspector/appium-inspector.AppImage --no-sandbox
 ```
 
 ## Execution
 ```
 appium
+/usr/local/appium-inspector/appium-inspector.AppImage --no-sandbox
 ```
 
 ## References
