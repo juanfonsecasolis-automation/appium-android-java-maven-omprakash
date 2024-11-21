@@ -11,6 +11,15 @@ npm install -g appium@next
 appium driver install uiautomator2
 ```
 
+### Appium Inspector
+1. Download the corresponding Linux AppImage fromm https://github.com/appium/appium-inspector/releases
+1. Execute:
+```
+mkdir /usr/local/appium-inspector
+mv Appium-Inspector-2024.9.1-linux-x86_64.AppImage /usr/local/appium-inspector/appium-inspector.AppImage
+/usr/local/appium-inspector/appium-inspector.AppImage --no-sandbox
+```
+
 ## Execution
 ```
 appium
