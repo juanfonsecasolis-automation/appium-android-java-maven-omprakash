@@ -8,7 +8,8 @@ Repository for the course https://www.udemy.com/course/the-complete-appium-cours
 1. Add an Android Studio desktop entry by running `/usr/local/android-studio/bin/studio.sh` and selecting the gear icon > create desktop entry. 
 
 ### Kernel Virtual Machine (KVM) Accelerator
-1. Follow the instructions on https://developer.android.com/studio/run/emulator-acceleration#vm-linux
+1. Follow the instructions on https://developer.android.com/studio/run/emulator-acceleration#vm-linux for a generic linux.
+1. Follow the instructions on https://help.ubuntu.com/community/KVM/Installation for Ubuntu.
 
 ### Appium
 ```
