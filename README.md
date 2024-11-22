@@ -53,6 +53,11 @@ sudo apt install openjdk-8-jdk # or similar
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 ```
 
+### Project setup [2]
+* Install Gradle `apt-get install gradle`.
+* Install the Microsoft extension for Java and Gradle in VS Code.
+* Right-click > New Java Project > Gradle Project
+
 ## Execution
 ```
 appium
@@ -61,3 +66,4 @@ appium
 
 ## References
 1. Omprakash Chavan. Appium Mobile Automation - Android & iOS + Frameworks + CICD. Udemy. URL: https://www.udemy.com/course/the-complete-appium-course-for-ios-and-android/
+2. Microsoft. Java build tools in VS Code. URL: https://code.visualstudio.com/docs/java/java-build
