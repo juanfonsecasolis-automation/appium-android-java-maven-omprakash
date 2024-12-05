@@ -49,19 +49,26 @@ mv Appium-Inspector-2024.9.1-linux-x86_64.AppImage /usr/local/appium-inspector/a
 ### Java Development Kit (JDK)
 ```
 apt search openjdk
-sudo apt install openjdk-8-jdk # or similar
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+sudo apt-get install openjdk-11-jdk
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/bin
+```
+
+In case you get the error below, you need to upgrade your JDK version:
+```
+Class has been compiled by a more recent version of the Java Environment (class file version 53.0), this version of the Java Runtime only recognizes class file versions up to 52.0.
 ```
 
 ### Project setup [2]
-* Install Gradle `apt-get install gradle`.
-* Install the Microsoft extension for Java and Gradle in VS Code.
-* Right-click > New Java Project > Gradle Project
+```
+apt-get install gradle
+gradle init
+```
 
 ## Execution
 ```
 appium
 /usr/local/appium-inspector/appium-inspector.AppImage --no-sandbox
+gradle test
 ```
 
 ## References
