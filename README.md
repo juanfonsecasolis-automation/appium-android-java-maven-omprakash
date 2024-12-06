@@ -6,11 +6,6 @@ Repository for the course https://www.udemy.com/course/the-complete-appium-cours
 ### Android Studio
 1. Download Android Studio from https://developer.android.com/studio/install and follow the instructions to install it.
 1. Add an Android Studio desktop entry by running `/usr/local/android-studio/bin/studio.sh` and selecting the gear icon > create desktop entry. 
-1. Set Up system variables:
-```
-export ANDROID_HOME=~/Android/Sdk/
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-```
 
 ### Kernel Virtual Machine (KVM) Accelerator
 1. Follow the instructions on https://developer.android.com/studio/run/emulator-acceleration#vm-linux for a generic linux.
@@ -66,6 +61,8 @@ gradle init
 
 ## Execution
 ```
+export ANDROID_HOME=~/Android/Sdk/
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 appium
 /usr/local/appium-inspector/appium-inspector.AppImage --no-sandbox
 gradle test
