@@ -18,3 +18,4 @@ deactive
 
 # References
 1. https://github.com/juanfonsecasolis-automation/python-selenium-pytest
+2. https://github.com/appium/python-client

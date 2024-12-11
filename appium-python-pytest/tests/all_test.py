@@ -5,10 +5,10 @@
 
 import pytest
 from pages.menu_page import MenuPage
-from selenium.webdriver.support.wait import WebDriver
+from appium.webdriver import Remote
 
-class TestLogin:
+class TestMenu:
 
     @pytest.mark.positiveTests
-    def test_negative_login(self, driver: WebDriver):
+    def test_menu(self, driver: Remote):
         assert 1==1

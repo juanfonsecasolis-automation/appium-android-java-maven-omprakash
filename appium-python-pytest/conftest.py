@@ -10,22 +10,15 @@ from pages.base_page import BasePage
 def pytest_addoption(parser):
 
     parser.addoption(
-        "--browser", 
+        "--platform", 
         action="store", 
-        default="Chrome", 
-        help="Browser to execute the tests.")  
-    
-    parser.addoption(
-        "--headless", 
-        action="store", 
-        default="False", 
-        help="Execute tests in headless mode.")  
-
+        default="Android", 
+        help="Platform to execute the tests (for instance, Android).") 
+     
 @pytest.fixture
 def params(request):
     params = {}
-    params['browser'] = request.config.getoption("--browser")
-    params['headless'] = request.config.getoption("--headless")
+    params['platform'] = request.config.getoption("--platform")
     return params
 
 @pytest.fixture()
@@ -34,4 +27,4 @@ def driver(params):
     driver = get_driver(params)
     yield driver
     # teardown
-    driver.close()
+    driver.stop_client()
