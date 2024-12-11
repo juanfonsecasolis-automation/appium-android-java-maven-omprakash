@@ -68,6 +68,18 @@ appium
 gradle test
 ```
 
+## Quizes
+* Appium 2.0 follows the W3C WebDriver Protocol, not the JSON 2.0 Wire protocol anymore.
+* To execute iOS automation Appium needs XCode (which is only available on MacOS).
+* Appium is a Node.js server (Javascript that runs on desktop).
+* Appium can automate different types of mobile applications (native, hybrid, and web-apps).
+* Appium is designed for end-to-end (E2E) functional tests.
+* Driver UiAutomator2 is used for Android, whereas XCUITest is used for iOS.
+* Appium doesn't require re-compilation of the apps when interacting with real devices.
+
+## Notes
+* Expresso is a faster an alternative to UiAutomator2 for android automation, however it's challenging to learn and is more recomended for unit testing rather than E2E testing.
+
 ## References
 1. Omprakash Chavan. Appium Mobile Automation - Android & iOS + Frameworks + CICD. Udemy. URL: https://www.udemy.com/course/the-complete-appium-course-for-ios-and-android/
 2. Microsoft. Java build tools in VS Code. URL: https://code.visualstudio.com/docs/java/java-build
