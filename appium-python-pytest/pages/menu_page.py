@@ -7,7 +7,7 @@ from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriver, WebElement
 
-class LoginPage(BasePage):
+class MenuPage(BasePage):
 
     def __init__(self, driver: WebDriver):
         super().__init__(driver)

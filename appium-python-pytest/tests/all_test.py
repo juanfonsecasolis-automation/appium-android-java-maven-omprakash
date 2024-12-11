@@ -4,7 +4,7 @@
 #
 
 import pytest
-from pages.menu_page import LoginPage
+from pages.menu_page import MenuPage
 from selenium.webdriver.support.wait import WebDriver
 
 class TestLogin:
