@@ -9,17 +9,14 @@ from appium.webdriver import Remote
 from appium.webdriver.appium_connection import AppiumConnection
 from selenium.webdriver.remote.client_config import ClientConfig
 
-APPIUM_HOST = '127.0.0.1'
-APPIUM_PORT = 4723
-
 def get_driver(params: dict) -> Remote:
     driver = None
     if params['platform']=='Android':
-        return get_android_driver()
+        return get_android_driver(params)
     else:
         raise NotImplementedError('Unknown webdriver.')
 
-def get_android_driver() -> Remote:
+def get_android_driver(params: dict) -> Remote:
     options = UiAutomator2Options()
     options.device_name = 'SmallPhoneAPI35'
     options.platform_name = 'Android'
@@ -29,7 +26,7 @@ def get_android_driver() -> Remote:
         }
     )
     client_config = ClientConfig(
-        remote_server_addr = f'http://{APPIUM_HOST}:{APPIUM_PORT}',
+        remote_server_addr = f'http://{params['appium_host']}:{params['appium_port']}',
         ignore_certificates = True
     )
     appium_connector = AppiumConnection(client_config=client_config)
