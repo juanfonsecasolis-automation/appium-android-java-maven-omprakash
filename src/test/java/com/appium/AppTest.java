@@ -28,8 +28,8 @@ public class AppTest
             options
         );
         
-        By views = AppiumBy.accessibilityId("Views");
-        driver.findElement(views).click();
+        By option = AppiumBy.accessibilityId("Animation");
+        driver.findElement(option).click();
 
         assertTrue( true );
     }
