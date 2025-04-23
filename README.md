@@ -14,18 +14,18 @@ Repository for the course https://www.udemy.com/course/the-complete-appium-cours
 
 ### Sample App
 * Download the SampleCode app from [this Appium's page](https://github.com/appium/appium/blob/master/packages/appium/sample-code/apps/ApiDemos-debug.apk)
-* You can move the APK in /usr/local/appium-inspector `mv ~/Downloads/ApiDemos-debug.apk /usr/local/appium-inspector`.
 
 ### Appium
 ```
 apt-get install nodejs
 apt-get install npm
 npm install -g appium@next
+appium driver update uiautomator2
 appium driver install uiautomator2
 ```
 
 ### Appium Inspector
-1. Download the corresponding Linux AppImage fromm https://github.com/appium/appium-inspector/releases
+1. Download the corresponding Linux AppImage from https://github.com/appium/appium-inspector/releases
 1. Execute:
 ```
 mkdir /usr/local/appium-inspector
@@ -37,7 +37,7 @@ mv Appium-Inspector-2024.9.1-linux-x86_64.AppImage /usr/local/appium-inspector/a
   "automationName": "uiautomator2",
   "platformName": "Android",
   "deviceName": "SmallPhoneAPI35",
-  "app": "/usr/local/appium-inspector/ApiDemos-debug.apk"
+  "app": "/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/ApiDemos-debug.apk"
 }
 ```
 
@@ -53,11 +53,16 @@ In case you get the error below, you need to upgrade your JDK version:
 Class has been compiled by a more recent version of the Java Environment (class file version 53.0), this version of the Java Runtime only recognizes class file versions up to 52.0.
 ```
 
-### Project setup [2]
+### Project setup with Maven [2, 3]
+* Install the "Maven for Java" extension.
+* Install Maven:
 ```
-apt-get install gradle
-gradle init
+sudo apt-get install maven
+mvn --version
 ```
+* Right-click on the solution explorer > Maven > New Project > "maven-archetype-quickstart" archetype
+* Check your Java version `java --version`
+* Run `mvn test`
 
 ## Execution
 ```
@@ -65,7 +70,7 @@ export ANDROID_HOME=~/Android/Sdk/
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 appium
 /usr/local/appium-inspector/appium-inspector.AppImage --no-sandbox
-gradle test
+mvn test
 ```
 
 ## Quizes
@@ -83,3 +88,4 @@ gradle test
 ## References
 1. Omprakash Chavan. Appium Mobile Automation - Android & iOS + Frameworks + CICD. Udemy. URL: https://www.udemy.com/course/the-complete-appium-course-for-ios-and-android/
 2. Microsoft. Java build tools in VS Code. URL: https://code.visualstudio.com/docs/java/java-build
+3. GitBook. Creating Your Project with Maven. URL: https://gorkem1.gitbooks.io/visual-studio-code-for-java/content/chapter-1/Maven-Create.html (last consulted on 04/23/25).
