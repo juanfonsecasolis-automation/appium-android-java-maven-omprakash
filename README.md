@@ -3,7 +3,7 @@ Repository for the course https://www.udemy.com/course/the-complete-appium-cours
 
 ## Set up
 
-### Android Studio
+### Android Studio (neccesary to set-up the phone emulator)
 1. Download Android Studio from https://developer.android.com/studio/install and follow the instructions to install it.
 1. Add an Android Studio desktop entry by running `/usr/local/android-studio/bin/studio.sh` and selecting the gear icon > create desktop entry. 
 
@@ -73,7 +73,17 @@ appium
 mvn test
 ```
 
-## Quizes
+## Locator strategies
+|Locator strategy|Example|Speed|
+|---|---|---|
+|Accessibility ID|`<unique_element_name>`|?|
+|ID|`<app_package><resource_id>`|?|
+|Class Name|`android.widget.TextView`|?|
+|Name|`<static_test>`|?|
+|XPath|`//<UiAutomator2 Class>[@<attribute_name>="attribute value"]/<axes>::<expressions>`|?|
+|UiAutomator2 (UiSelector)|`new UiSelector().text("Animation")`|?|
+
+## Insights from some of the quices
 * Appium 2.0 follows the W3C WebDriver Protocol, not the JSON 2.0 Wire protocol anymore.
 * To execute iOS automation Appium needs XCode (which is only available on MacOS).
 * Appium is a Node.js server (Javascript that runs on desktop).

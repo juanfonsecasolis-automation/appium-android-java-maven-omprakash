@@ -5,9 +5,10 @@ import static org.junit.Assert.assertTrue;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
-
 import org.junit.Test;
+import org.openqa.selenium.By;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
@@ -27,6 +28,9 @@ public class AppTest
             options
         );
         
+        By views = AppiumBy.accessibilityId("Views");
+        driver.findElement(views).click();
+
         assertTrue( true );
     }
 }
