@@ -30,7 +30,8 @@ public class AppTest
             driver.findElements(AppiumBy.id("android:id/text1")).get(1),
             driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc='Accessibility']")),
             driver.findElement(AppiumBy.xpath("//*[@content-desc='Accessibility']")),
-            //driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text('Accessibility')"))
+            driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Accessibility\")")),
+            driver.findElements(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.TextView\")")).get(2)
         };
 
         for (WebElement element : elements) {
