@@ -11,7 +11,7 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 public class AppTest 
 {
     @Test
-    public void testDifferentLocatorsOfTheSameElement() throws Exception
+    public void testDifferentLocatorsOfTheSameAccessibilityMenuItem() throws Exception
     {
         UiAutomator2Options options = new UiAutomator2Options()
             .setAutomationName("uiautomator2")
@@ -31,7 +31,9 @@ public class AppTest
             driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc='Accessibility']")),
             driver.findElement(AppiumBy.xpath("//*[@content-desc='Accessibility']")),
             driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Accessibility\")")),
-            driver.findElements(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.TextView\")")).get(2)
+            driver.findElements(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.TextView\")")).get(2),
+            driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().description(\"Accessibility\")")),
+            driver.findElements(AppiumBy.androidUIAutomator("new UiSelector().resourceId(\"android:id/text1\")")).get(1),
         };
 
         for (WebElement element : elements) {
