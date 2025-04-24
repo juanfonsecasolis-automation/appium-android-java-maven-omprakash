@@ -1,13 +1,9 @@
 package com.appium;
 
 import org.junit.Assert;
-
 import java.net.URI;
-
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
