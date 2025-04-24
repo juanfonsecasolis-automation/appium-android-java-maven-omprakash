@@ -1,12 +1,12 @@
 package com.appium;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.Assert;
 
-import java.net.MalformedURLException;
 import java.net.URI;
-import java.net.URISyntaxException;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
@@ -15,7 +15,7 @@ import io.appium.java_client.android.options.UiAutomator2Options;
 public class AppTest 
 {
     @Test
-    public void shouldAnswerWithTrue() throws MalformedURLException, URISyntaxException
+    public void testDifferentLocatorsOfTheSameElement() throws Exception
     {
         UiAutomator2Options options = new UiAutomator2Options()
             .setAutomationName("uiautomator2")
@@ -28,9 +28,20 @@ public class AppTest
             options
         );
         
-        By option = AppiumBy.accessibilityId("Animation");
-        driver.findElement(option).click();
+        WebElement[] elements= new WebElement[]
+        {
+            driver.findElement(AppiumBy.accessibilityId("Accessibility")),
+            driver.findElements(AppiumBy.id("android:id/text1")).get(1),
+            driver.findElement(AppiumBy.xpath("//android.widget.TextView[@content-desc='Accessibility']")),
+            driver.findElement(AppiumBy.xpath("//*[@content-desc='Accessibility']")),
+            //driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text('Accessibility')"))
+        };
 
-        assertTrue( true );
+        for (WebElement element : elements) {
+            Assert.assertEquals(
+                "Accessibility", 
+                element.getText()
+            );
+        }
     }
 }

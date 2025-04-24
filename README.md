@@ -74,14 +74,14 @@ mvn test
 ```
 
 ## Locator strategies
-|Locator strategy|Example|Speed|
-|---|---|---|
-|Accessibility ID|`<unique_element_name>`|?|
-|ID|`<app_package><resource_id>`|?|
-|Class Name|`android.widget.TextView`|?|
-|Name|`<static_test>`|?|
-|XPath|`//<UiAutomator2 Class>[@<attribute_name>="attribute value"]/<axes>::<expressions>`|?|
-|UiAutomator2 (UiSelector)|`new UiSelector().text("Animation")`|?|
+|Locator strategy|Speed|Definition|Example|
+|---|---|---|---|
+|Accessibility ID|Fast|Adhoc|`<unique_element_name>`|
+|ID|Fast|Adhoc|`<app_package><resource_id>`|
+|Class Name|Fast|Fixed|`android.widget.TextView`|
+|Name|?|?|`<static_test>`|
+|XPath|Slow|Fixed|`//<UiAutomator2 Class>[@<attribute_name>="attribute value"]/<axes>::<expressions>`|
+|UiAutomator2 (UiSelector)|Very fast|Fixed|`new UiSelector().text("Animation")`|
 
 ## Insights from some of the quices
 * Appium 2.0 follows the W3C WebDriver Protocol, not the JSON 2.0 Wire protocol anymore.
