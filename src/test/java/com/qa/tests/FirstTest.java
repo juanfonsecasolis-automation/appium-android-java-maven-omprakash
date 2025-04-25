@@ -1,28 +1,17 @@
-package com.appium;
+package com.qa.tests;
 
 import org.junit.Assert;
-import java.net.URI;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
+import com.qa.pages.LandingPage;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.options.UiAutomator2Options;
 
-public class AppTest 
+public class FirstTest extends TestBase
 {
     @Test
     public void testDifferentLocatorsOfTheSameAccessibilityMenuItem() throws Exception
     {
-        UiAutomator2Options options = new UiAutomator2Options()
-            .setAutomationName("uiautomator2")
-            .setPlatformName("Android")
-            .setDeviceName("SmallPhoneAPI35")
-            .setApp("/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/ApiDemos-debug.apk");
-
-        AndroidDriver driver = new AndroidDriver(
-            new URI("http://127.0.0.1:4723").toURL(), 
-            options
-        );
+        com.qa.pages.LandingPage landingPage = new LandingPage(driver);
         
         WebElement[] elements= new WebElement[]
         {

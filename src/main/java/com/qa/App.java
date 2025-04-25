@@ -1,4 +1,4 @@
-package com.appium;
+package com.qa;
 
 /**
  * Hello world!
