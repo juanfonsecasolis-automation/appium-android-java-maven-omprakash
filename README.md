@@ -72,6 +72,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 appium
 /usr/local/appium-inspector/appium-inspector.AppImage --no-sandbox
 mvn test -DsuiteXmlFilePath=src/test/resources/AppiumDemoAppTest.xml
+mvn test -DsuiteXmlFilePath=src/test/resources/SauceLabsDemoAppTest.xml
 ```
 
 ## Locator strategies
