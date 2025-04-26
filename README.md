@@ -12,8 +12,9 @@ Repository for the course https://www.udemy.com/course/the-complete-appium-cours
 1. Follow the instructions on https://help.ubuntu.com/community/KVM/Installation for Ubuntu.
 1. HAXM is deprecated (see https://developer.android.com/studio/run/emulator-acceleration#haxm-uninstall)
 
-### Sample App
-* Download the SampleCode app from [this Appium's page](https://github.com/appium/appium/blob/master/packages/appium/sample-code/apps/ApiDemos-debug.apk)
+### Sample Apps
+* [Appium Sample App](https://github.com/appium/appium/blob/master/packages/appium/sample-code/apps/ApiDemos-debug.apk).
+* [Sauce Demo App](https://github.com/saucelabs/my-demo-app-android/releases).
 
 ### Appium
 ```
@@ -64,13 +65,13 @@ mvn --version
 * Check your Java version `java --version`
 * Run `mvn test`
 
-## Execution
+## Execution [4]
 ```
 export ANDROID_HOME=~/Android/Sdk/
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 appium
 /usr/local/appium-inspector/appium-inspector.AppImage --no-sandbox
-mvn test
+mvn test -DsuiteXmlFilePath=src/test/resources/AppiumDemoAppTest.xml
 ```
 
 ## Locator strategies
@@ -99,3 +100,4 @@ mvn test
 1. Omprakash Chavan. Appium Mobile Automation - Android & iOS + Frameworks + CICD. Udemy. URL: https://www.udemy.com/course/the-complete-appium-course-for-ios-and-android/
 2. Microsoft. Java build tools in VS Code. URL: https://code.visualstudio.com/docs/java/java-build
 3. GitBook. Creating Your Project with Maven. URL: https://gorkem1.gitbooks.io/visual-studio-code-for-java/content/chapter-1/Maven-Create.html (last consulted on 04/23/25).
+4. TutorialsPoint. Run Specific TestNG Suite with Maven from Command Line. URL: https://www.tutorialspoint.com/how-to-run-specific-testng-suite-with-maven-from-command-line (last consulted on 04/25/24)

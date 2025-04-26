@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+    <test name="SauceLabsDemoAppTest">
+        <parameter name="automationName" value="uiautomator2"/>
+        <parameter name="platformName" value="android"/>
+        <parameter name="deviceName" value="SmallPhoneAPI35"/>
+        <parameter name="appLocation" value="/home/juanf/Downloads/mda-2.2.0-25.apk"/>
+        <parameter name="appiumURL" value="http://127.0.0.1:4723"/>
+        <classes>
+            <class name="com.qa.tests.SauceLabsDemoAppTest"/>
+        </classes>
+    </test>
+</suite>

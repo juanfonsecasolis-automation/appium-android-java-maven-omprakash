@@ -3,16 +3,13 @@ package com.qa.tests;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
-import com.qa.pages.LandingPage;
 import io.appium.java_client.AppiumBy;
 
-public class FirstTest extends TestBase
+public class AppiumDemoAppTest extends TestBase
 {
     @Test
     public void testDifferentLocatorsOfTheSameAccessibilityMenuItem() throws Exception
-    {
-        com.qa.pages.LandingPage landingPage = new LandingPage(driver);
-        
+    {        
         WebElement[] elements= new WebElement[]
         {
             driver.findElement(AppiumBy.accessibilityId("Accessibility")),

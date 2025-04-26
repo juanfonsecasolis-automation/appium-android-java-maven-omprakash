@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
-    <test name="Test">
+    <test name="AppiumDemoAppTest">
         <parameter name="automationName" value="uiautomator2"/>
         <parameter name="platformName" value="android"/>
         <parameter name="deviceName" value="SmallPhoneAPI35"/>
         <parameter name="appLocation" value="/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/ApiDemos-debug.apk"/>
         <parameter name="appiumURL" value="http://127.0.0.1:4723"/>
         <classes>
-            <class name="com.qa.FirstTest"/>
+            <class name="com.qa.tests.AppiumDemoAppTest"/>
         </classes>
     </test>
 </suite>
