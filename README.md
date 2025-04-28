@@ -38,7 +38,8 @@ mv Appium-Inspector-2024.9.1-linux-x86_64.AppImage /usr/local/appium-inspector/a
   "automationName": "uiautomator2",
   "platformName": "Android",
   "deviceName": "SmallPhoneAPI35",
-  "app": "/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/ApiDemos-debug.apk"
+  "app": "/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/ApiDemos-debug.apk",
+  "app": "/home/juanf/Downloads/mda-2.2.0-25.apk",
 }
 ```
 
@@ -71,8 +72,8 @@ export ANDROID_HOME=~/Android/Sdk/
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 appium
 /usr/local/appium-inspector/appium-inspector.AppImage --no-sandbox
-mvn test -DsuiteXmlFilePath=src/test/resources/AppiumDemoAppTest.xml
-mvn test -DsuiteXmlFilePath=src/test/resources/SauceLabsDemoAppTest.xml
+mvn clean test -DsuiteXmlFilePath=src/test/resources/AppiumDemoAppTest.xml
+mvn clean test -DsuiteXmlFilePath=src/test/resources/SauceLabsDemoAppTest.xml
 ```
 
 ## Locator strategies

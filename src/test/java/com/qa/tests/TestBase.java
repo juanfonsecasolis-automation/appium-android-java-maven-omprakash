@@ -1,12 +1,11 @@
 package com.qa.tests;
 
+import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import org.testng.annotations.*;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class TestBase 
 {
@@ -16,7 +15,7 @@ public class TestBase
     @Parameters({"automationName", "platformName", "deviceName", "appLocation", "appiumURL"})
     public void beforeTest(String automationName, String platformName, String deviceName, 
         String appLocation, String appiumURL) 
-        throws URISyntaxException, FileNotFoundException, IOException
+        throws URISyntaxException, MalformedURLException
     {
         UiAutomator2Options options = new UiAutomator2Options()
             .setAutomationName(automationName)
@@ -35,5 +34,4 @@ public class TestBase
     {
         driver.quit();
     }
-
 }
