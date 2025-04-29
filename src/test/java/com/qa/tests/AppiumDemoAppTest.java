@@ -1,9 +1,9 @@
 package com.qa.tests;
 
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.WebElement;
 import io.appium.java_client.AppiumBy;
+import org.testng.annotations.Test;
 
 public class AppiumDemoAppTest extends TestBase
 {
