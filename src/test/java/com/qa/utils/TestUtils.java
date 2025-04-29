@@ -4,6 +4,6 @@ import java.time.Duration;
 
 public class TestUtils {
 
-    public static final Duration WAIT = null;
+    public static final Duration WAIT = Duration.ofSeconds(10);
     
 }

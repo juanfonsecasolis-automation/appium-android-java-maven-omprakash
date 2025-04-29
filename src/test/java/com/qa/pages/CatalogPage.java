@@ -23,8 +23,7 @@ public class CatalogPage extends WithMenuPage
     {
         super(driver);
         waitForVisibility(titleLabel);
-        Assert.fail();
-        Assert.assertEquals("Productss", titleLabel.getText());
+        Assert.assertEquals("Products", titleLabel.getText());
     }
 
 }

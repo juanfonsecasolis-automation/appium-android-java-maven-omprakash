@@ -15,7 +15,7 @@ public class PageBase
     public PageBase(AndroidDriver driver)
     {
         this.driver = driver;
-        //PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
     }
 
     public void waitForVisibility(WebElement element)
