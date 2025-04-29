@@ -21,11 +21,11 @@ public class LogInPage extends PageBase
         super(driver);
     }
 
-    public ProductCatalogPage logIn(String username, String password) {
+    public CatalogPage logIn(String username, String password) {
         sendKeys(usernameField, username);
         sendKeys(passwordField, password);
         click(loginButton);
-        return new ProductCatalogPage(driver);
+        return new CatalogPage(driver);
     }
 
 }

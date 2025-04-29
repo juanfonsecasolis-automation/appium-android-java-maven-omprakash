@@ -12,16 +12,19 @@ public class TestBase
     protected AndroidDriver driver;
     
     @BeforeTest
-    @Parameters({"automationName", "platformName", "deviceName", "appLocation", "appiumURL"})
+    @Parameters({"automationName", "platformName", "deviceName", "appLocation", "appiumURL",
+        "appPackage", "appWaitActivity"})
     public void beforeTest(String automationName, String platformName, String deviceName, 
-        String appLocation, String appiumURL) 
+        String appLocation, String appiumURL, String appPackage, String appWaitActivity) 
         throws URISyntaxException, MalformedURLException
     {
         UiAutomator2Options options = new UiAutomator2Options()
             .setAutomationName(automationName)
             .setPlatformName(platformName)
             .setDeviceName(deviceName)
-            .setApp(appLocation);
+            .setApp(appLocation)
+            .setAppPackage(appPackage)
+            .setAppWaitActivity(appWaitActivity);
 
         driver = new AndroidDriver(
             new URI(appiumURL).toURL(), 

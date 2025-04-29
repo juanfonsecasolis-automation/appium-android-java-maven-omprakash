@@ -5,7 +5,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.testng.Assert;
 
-public class ProductCatalogPage extends WithMenuPage
+public class CatalogPage extends WithMenuPage
 {
     @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/nameET")
     private WebElement usernameField;
@@ -19,11 +19,12 @@ public class ProductCatalogPage extends WithMenuPage
     @AndroidFindBy(id = "title")
     private WebElement titleLabel;
     
-    public ProductCatalogPage(AndroidDriver driver)
+    public CatalogPage(AndroidDriver driver)
     {
         super(driver);
         waitForVisibility(titleLabel);
-        Assert.assertEquals("Products", titleLabel.getText());
+        Assert.fail();
+        Assert.assertEquals("Productss", titleLabel.getText());
     }
 
 }

@@ -6,6 +6,8 @@
         <parameter name="deviceName" value="SmallPhoneAPI35"/>
         <parameter name="appLocation" value="/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/ApiDemos-debug.apk"/>
         <parameter name="appiumURL" value="http://127.0.0.1:4723"/>
+        <parameter name="appPackage" value="io.appium.android.apis"/>
+        <parameter name="appWaitActivity" value="io.appium.android.apis.ApiDemos"/>
         <classes>
             <class name="com.qa.tests.AppiumDemoAppTest"/>
         </classes>

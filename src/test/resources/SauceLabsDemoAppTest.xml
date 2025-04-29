@@ -6,6 +6,8 @@
         <parameter name="deviceName" value="SmallPhoneAPI35"/>
         <parameter name="appLocation" value="/home/juanf/Downloads/mda-2.2.0-25.apk"/>
         <parameter name="appiumURL" value="http://127.0.0.1:4723"/>
+        <parameter name="appPackage" value="com.saucelabs.mydemoapp.android"/>
+        <parameter name="appWaitActivity" value="com.saucelabs.mydemoapp.android.view.activities.MainActivity"/>
         <classes>
             <class name="com.qa.tests.SauceLabsDemoAppTest"/>
         </classes>

@@ -38,9 +38,17 @@ mv Appium-Inspector-2024.9.1-linux-x86_64.AppImage /usr/local/appium-inspector/a
   "automationName": "uiautomator2",
   "platformName": "Android",
   "deviceName": "SmallPhoneAPI35",
-  "app": "/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/ApiDemos-debug.apk",
-  "app": "/home/juanf/Downloads/mda-2.2.0-25.apk",
+  "appium:app": "/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/ApiDemos-debug.apk",
+  "appium:app": "/home/juanf/Downloads/mda-2.2.0-25.apk",
 }
+```
+
+### Find appPackage and appActivityName [5]
+* Start the app in the Android device and execute the commands below:
+```
+adb devices
+adb shell
+dumpsys window displays | grep -E 'mCurrentFocus'
 ```
 
 ### Java Development Kit (JDK)
@@ -102,4 +110,5 @@ mvn clean test -DsuiteXmlFilePath=src/test/resources/SauceLabsDemoAppTest.xml
 1. Omprakash Chavan. Appium Mobile Automation - Android & iOS + Frameworks + CICD. Udemy. URL: https://www.udemy.com/course/the-complete-appium-course-for-ios-and-android/
 2. Microsoft. Java build tools in VS Code. URL: https://code.visualstudio.com/docs/java/java-build
 3. GitBook. Creating Your Project with Maven. URL: https://gorkem1.gitbooks.io/visual-studio-code-for-java/content/chapter-1/Maven-Create.html (last consulted on 04/23/25).
-4. TutorialsPoint. Run Specific TestNG Suite with Maven from Command Line. URL: https://www.tutorialspoint.com/how-to-run-specific-testng-suite-with-maven-from-command-line (last consulted on 04/25/24)
+4. TutorialsPoint. Run Specific TestNG Suite with Maven from Command Line. URL: https://www.tutorialspoint.com/how-to-run-specific-testng-suite-with-maven-from-command-line (last consulted on 04/25/24).
+5. Anish. 2 Ways to find appPackage and appActivity name of your App. URL: https://www.automationtestinghub.com/apppackage-and-appactivity-name/ (last consulted on 04/29/24).
