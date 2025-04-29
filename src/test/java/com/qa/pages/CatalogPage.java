@@ -16,7 +16,7 @@ public class CatalogPage extends WithMenuPage
     @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/loginBtn")
     private WebElement loginButton;
 
-    @AndroidFindBy(id = "title")
+    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/productTV")
     private WebElement titleLabel;
     
     public CatalogPage(AndroidDriver driver)

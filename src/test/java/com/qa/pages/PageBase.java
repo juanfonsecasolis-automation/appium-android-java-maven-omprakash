@@ -21,7 +21,7 @@ public class PageBase
     public void waitForVisibility(WebElement element)
     {
         WebDriverWait wait = new WebDriverWait(driver, TestUtils.WAIT);
-        wait.until(ExpectedConditions.invisibilityOf(element));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 
     public void click(WebElement element)
