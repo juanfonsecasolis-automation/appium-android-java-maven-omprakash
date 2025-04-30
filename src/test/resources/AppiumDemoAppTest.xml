@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="false">
+    <listeners>
+        <listener class-name="com.qa.listeners.TestListener"/>
+    </listeners>
     <test name="AppiumDemoAppTest">
         <parameter name="automationName" value="uiautomator2"/>
         <parameter name="platformName" value="android"/>
