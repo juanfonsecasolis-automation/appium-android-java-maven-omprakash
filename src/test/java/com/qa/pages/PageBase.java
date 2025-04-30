@@ -8,7 +8,7 @@ import com.qa.utils.TestUtils;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
-public class PageBase 
+public abstract class PageBase 
 {
     protected AndroidDriver driver;
 

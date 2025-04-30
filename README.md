@@ -39,7 +39,7 @@ mv Appium-Inspector-2024.9.1-linux-x86_64.AppImage /usr/local/appium-inspector/a
   "platformName": "Android",
   "deviceName": "SmallPhoneAPI35",
   "appium:app": "/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/ApiDemos-debug.apk",
-  "appium:app": "/home/juanf/Downloads/mda-2.2.0-25.apk",
+  "appium:app": "/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/mda-2.2.0-25.apk",
 }
 ```
 

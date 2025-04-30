@@ -7,14 +7,18 @@ import org.testng.annotations.*;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
-public class TestBase 
+public abstract class TestBase 
 {
     protected AndroidDriver driver;
     
-    @BeforeTest
+    /* 
+     * Opposite to web automation, we can't create multiple instances of the mobile app, 
+     * we have to use one.
+    */
+    @BeforeClass
     @Parameters({"automationName", "platformName", "deviceName", "appLocation", "appiumURL",
         "appPackage", "appWaitActivity"})
-    public void beforeTest(String automationName, String platformName, String deviceName, 
+    public void beforeClass(String automationName, String platformName, String deviceName, 
         String appLocation, String appiumURL, String appPackage, String appWaitActivity) 
         throws URISyntaxException, MalformedURLException
     {
@@ -32,8 +36,8 @@ public class TestBase
         );
     }
 
-    @AfterTest
-    public void afterTest()
+    @AfterClass
+    public void afterClass()
     {
         driver.quit();
     }
