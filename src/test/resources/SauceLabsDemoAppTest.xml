@@ -12,7 +12,8 @@
         <parameter name="appPackage" value="com.saucelabs.mydemoapp.android"/>
         <parameter name="appWaitActivity" value="com.saucelabs.mydemoapp.android.view.activities.MainActivity"/>
         <classes>
-            <class name="com.qa.tests.SauceLabsDemoAppTest"/>
+            <!--class name="com.qa.tests.sauceLabsDemoApp.LoginTests"/-->
+            <class name="com.qa.tests.sauceLabsDemoApp.CatalogTests"/>
         </classes>
     </test>
 </suite>

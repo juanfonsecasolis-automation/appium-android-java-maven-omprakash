@@ -1,4 +1,4 @@
-package com.qa.tests;
+package com.qa.tests.sauceLabsDemoApp;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -7,8 +7,9 @@ import com.qa.pages.CatalogPage;
 import com.qa.pages.LogInAttempt;
 import com.qa.pages.LogInPage;
 import com.qa.pages.WithMenuPage.MenuItemType;
+import com.qa.tests.TestBase;
 
-public class SauceLabsDemoAppTest extends TestBase 
+public class LoginTests extends TestBase 
 {
 
     @DataProvider(name = "logInDataProvider")
