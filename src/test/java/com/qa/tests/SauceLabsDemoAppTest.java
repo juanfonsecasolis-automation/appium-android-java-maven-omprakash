@@ -15,7 +15,7 @@ public class SauceLabsDemoAppTest extends TestBase
     public Object[][] logInDataProvider() {
         return new Object[][] {
             { "", "", "Username is required" },
-            //{ "username", "", "Enter Password" },
+            { "username", "", "Enter Password" },
         };
     }
 

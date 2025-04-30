@@ -15,10 +15,10 @@ public abstract class TestBase
      * Opposite to web automation, we can't create multiple instances of the mobile app, 
      * we have to use one.
     */
-    @BeforeTest
+    @BeforeMethod
     @Parameters({"automationName", "platformName", "deviceName", "appLocation", "appiumURL",
         "appPackage", "appWaitActivity"})
-    public void beforeTest(String automationName, String platformName, String deviceName, 
+    public void beforeMethod(String automationName, String platformName, String deviceName, 
         String appLocation, String appiumURL, String appPackage, String appWaitActivity) 
         throws URISyntaxException, MalformedURLException
     {
@@ -36,8 +36,8 @@ public abstract class TestBase
         );
     }
 
-    @AfterTest
-    public void afterTest()
+    @AfterMethod
+    public void afterMethod()
     {
         driver.quit();
     }
