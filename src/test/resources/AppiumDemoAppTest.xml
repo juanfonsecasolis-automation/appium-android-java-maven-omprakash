@@ -6,7 +6,7 @@
     <test name="AppiumDemoAppTest">
         <parameter name="automationName" value="uiautomator2"/>
         <parameter name="platformName" value="android"/>
-        <parameter name="deviceName" value="SmallPhoneAPI35"/>
+        <parameter name="udid" value="920135baf02f444a"/>
         <parameter name="appLocation" value="/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/ApiDemos-debug.apk"/>
         <parameter name="appiumURL" value="http://127.0.0.1:4723"/>
         <parameter name="appPackage" value="io.appium.android.apis"/>

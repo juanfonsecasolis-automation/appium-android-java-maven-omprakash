@@ -6,14 +6,14 @@
     <test name="SauceLabsDemoAppTest">
         <parameter name="automationName" value="uiautomator2"/>
         <parameter name="platformName" value="android"/>
-        <parameter name="deviceName" value="SmallPhoneAPI35"/>
+        <parameter name="udid" value="920135baf02f444a"/>
         <parameter name="appLocation" value="/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/mda-2.2.0-25.apk"/>
         <parameter name="appiumURL" value="http://127.0.0.1:4723"/>
         <parameter name="appPackage" value="com.saucelabs.mydemoapp.android"/>
         <parameter name="appWaitActivity" value="com.saucelabs.mydemoapp.android.view.activities.MainActivity"/>
         <classes>
-            <!--class name="com.qa.tests.sauceLabsDemoApp.LoginTests"/-->
-            <class name="com.qa.tests.sauceLabsDemoApp.CatalogTests"/>
+            <class name="com.qa.tests.sauceLabsDemoApp.LoginTests"/>
+            <!--class name="com.qa.tests.sauceLabsDemoApp.CatalogTests"/-->
         </classes>
     </test>
 </suite>

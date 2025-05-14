@@ -11,37 +11,38 @@ public abstract class TestBase
 {
     protected AndroidDriver driver;
     
-    /*@BeforeClass
-    public void beforeClass()
+    @BeforeMethod
+    @Parameters({"appPackage"})
+    public void beforeMethod(String appPackage)
     {
-        driver.activateApp("com.saucelabs.mydemoapp.android");
+        driver.activateApp(appPackage);
     }
 
-    @AfterClass
-    public void afterClass()
+    @AfterMethod
+    @Parameters({"appPackage"})
+    public void afterMethod(String appPackage)
     {
-        driver.terminateApp("com.saucelabs.mydemoapp.android");
-    }*/
+        driver.terminateApp(appPackage);
+    }
 
     /* 
-     * Opposite to web automation, we can't create multiple instances of the mobile app, 
-     * we have to use one.
+     * Contrary to web automation, we can't create multiple instances of the mobile app, 
+     * so we have to recycle it.
     */
-    @BeforeMethod
-    @Parameters({"automationName", "platformName", "deviceName", "appLocation", "appiumURL",
+    @BeforeClass
+    @Parameters({"automationName", "platformName", "udid", "appLocation", "appiumURL",
         "appPackage", "appWaitActivity"})
-    public void beforeMethod(String automationName, String platformName, String deviceName, 
+    public void beforeClass(String automationName, String platformName, String udid, 
         String appLocation, String appiumURL, String appPackage, String appWaitActivity) 
         throws URISyntaxException, MalformedURLException
     {
         UiAutomator2Options options = new UiAutomator2Options()
             .setAutomationName(automationName)
             .setPlatformName(platformName)
-            //.setDeviceName(deviceName)
             .setApp(appLocation)
             .setAppPackage(appPackage)
             .setAppWaitActivity(appWaitActivity)
-            .setUdid("920135baf02f444a");
+            .setUdid(udid);
 
         driver = new AndroidDriver(
             new URI(appiumURL).toURL(), 
@@ -49,8 +50,8 @@ public abstract class TestBase
         );
     }
 
-    @AfterMethod
-    public void afterMethod()
+    @AfterClass
+    public void afterClass()
     {
         driver.quit();
     }
