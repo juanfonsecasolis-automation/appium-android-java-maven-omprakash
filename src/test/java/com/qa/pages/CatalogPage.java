@@ -1,7 +1,6 @@
 package com.qa.pages;
 
 import org.openqa.selenium.WebElement;
-
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
