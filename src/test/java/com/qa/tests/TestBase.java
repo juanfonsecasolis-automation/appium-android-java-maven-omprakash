@@ -11,6 +11,18 @@ public abstract class TestBase
 {
     protected AndroidDriver driver;
     
+    /*@BeforeClass
+    public void beforeClass()
+    {
+        driver.activateApp("com.saucelabs.mydemoapp.android");
+    }
+
+    @AfterClass
+    public void afterClass()
+    {
+        driver.terminateApp("com.saucelabs.mydemoapp.android");
+    }*/
+
     /* 
      * Opposite to web automation, we can't create multiple instances of the mobile app, 
      * we have to use one.
@@ -25,10 +37,11 @@ public abstract class TestBase
         UiAutomator2Options options = new UiAutomator2Options()
             .setAutomationName(automationName)
             .setPlatformName(platformName)
-            .setDeviceName(deviceName)
+            //.setDeviceName(deviceName)
             .setApp(appLocation)
             .setAppPackage(appPackage)
-            .setAppWaitActivity(appWaitActivity);
+            .setAppWaitActivity(appWaitActivity)
+            .setUdid("920135baf02f444a");
 
         driver = new AndroidDriver(
             new URI(appiumURL).toURL(), 

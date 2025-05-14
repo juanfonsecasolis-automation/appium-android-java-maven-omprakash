@@ -32,14 +32,24 @@ appium driver install uiautomator2
 mkdir /usr/local/appium-inspector
 mv Appium-Inspector-2024.9.1-linux-x86_64.AppImage /usr/local/appium-inspector/appium-inspector.AppImage
 ```
-1. Capabilities:
+1. Capabilities #1:
 ```
 {
   "automationName": "uiautomator2",
   "platformName": "Android",
   "deviceName": "SmallPhoneAPI35",
   "appium:app": "/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/ApiDemos-debug.apk",
+  "appium:app": "/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/mda-2.2.0-25.apk"
+}
+```
+1. Capabilities #2:
+```
+{
+  "appium:automationName": "uiautomator2",
+  "platformName": "Android",
+  "appium:udid": "920135baf02f444a",
   "appium:app": "/home/juanf/repositorios/appium-android-java-maven-omprakash/apps/mda-2.2.0-25.apk",
+  "appium:appWaitActivity": "com.saucelabs.mydemoapp.android.view.activities.MainActivity"
 }
 ```
 
@@ -50,6 +60,7 @@ adb devices
 adb shell
 dumpsys window displays | grep -E 'mCurrentFocus'
 ```
+**Note:** using `adb devices` you can get the udid (for real devices).
 
 ### Java Development Kit (JDK)
 ```

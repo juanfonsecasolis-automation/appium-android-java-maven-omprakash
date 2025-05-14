@@ -1,0 +1,12 @@
+userName: juanmfonseca_OAocti
+accessKey: RPXGUHYiNKryqnTxJJ7y
+framework: testng
+app: bs://1c5ef154d30316edb4f21b1cc9cef29a1e004fb7
+platforms:
+  - platformName: android
+    deviceName: Samsung Galaxy S22 Ultra
+    platformVersion: 12.0
+parallelsPerPlatform: 1
+browserstackLocal: true
+buildName: browserstack-build-1
+projectName: BrowserStack Sample
