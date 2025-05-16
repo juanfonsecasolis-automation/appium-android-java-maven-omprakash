@@ -33,5 +33,4 @@ public class CatalogPage extends WithMenuPage
         click(product);
         return new ProductPage(driver);
     }
-
 }

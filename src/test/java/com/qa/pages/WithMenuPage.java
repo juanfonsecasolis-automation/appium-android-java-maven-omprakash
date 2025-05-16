@@ -1,5 +1,7 @@
 package com.qa.pages;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import io.appium.java_client.AppiumBy;
@@ -10,6 +12,9 @@ public class WithMenuPage extends PageBase
 {
     @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/menuIV")
     WebElement menuIcon;
+
+    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/itemTV")
+    List<WebElement> menuItems;
 
     By loginButtonLocator = AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\"Log In\").instance(0))");
     
@@ -35,4 +40,10 @@ public class WithMenuPage extends PageBase
         }
     }
 
+    public List<String> getMenuItemNames() {
+        click(menuIcon);
+        List<String> names = new ArrayList<String>();
+        menuItems.forEach(x -> names.add(x.getText()));
+        return names;
+    }
 }
