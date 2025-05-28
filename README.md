@@ -123,3 +123,4 @@ mvn clean test -DsuiteXmlFilePath=src/test/resources/SauceLabsDemoAppTest.xml
 3. GitBook. Creating Your Project with Maven. URL: https://gorkem1.gitbooks.io/visual-studio-code-for-java/content/chapter-1/Maven-Create.html (last consulted on 04/23/25).
 4. TutorialsPoint. Run Specific TestNG Suite with Maven from Command Line. URL: https://www.tutorialspoint.com/how-to-run-specific-testng-suite-with-maven-from-command-line (last consulted on 04/25/24).
 5. Anish. 2 Ways to find appPackage and appActivity name of your App. URL: https://www.automationtestinghub.com/apppackage-and-appactivity-name/ (last consulted on 04/29/24).
+6. Meet Gondaliya. Cucumber BDD testing using TestNG framework. URL: https://medium.com/@mgondaliya1210/cucumber-bdd-testing-using-testng-framework-004c8fb3ce39 (last consulted on 05/28/25).
