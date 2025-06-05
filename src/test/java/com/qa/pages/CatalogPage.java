@@ -1,5 +1,6 @@
 package com.qa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
@@ -29,8 +30,10 @@ public class CatalogPage extends WithMenuPage
 
     public ProductPage openProduct(String productName) throws InterruptedException 
     {
-        WebElement product = driver.findElement(AppiumBy.xpath(String.format("//android.widget.TextView[@content-desc=\"Product Title\" and @text=\"%s\"]/parent::*", productName)));
+        By productNameLocator = AppiumBy.xpath(String.format("//android.widget.TextView[@content-desc=\"Product Title\" and @text=\"%s\"]/parent::*", productName));
+        WebElement product = driver.findElement(productNameLocator);
         click(product);
+        waitForInvisibility(product);
         return new ProductPage(driver);
     }
 }

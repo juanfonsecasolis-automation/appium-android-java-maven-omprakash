@@ -9,8 +9,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class ProductPage extends WithMenuPage 
 {
-    @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/productTV")
-    WebElement titleLabel;
+    By titleLabelLocator = AppiumBy.id("com.saucelabs.mydemoapp.android:id/productTV");
 
     @AndroidFindBy(id = "com.saucelabs.mydemoapp.android:id/cartBt")
     WebElement addToCartButton;
@@ -20,13 +19,13 @@ public class ProductPage extends WithMenuPage
     public ProductPage(AndroidDriver driver) 
     {
         super(driver);
-        waitForVisibility(titleLabel);
+        waitForVisibility(driver.findElement(titleLabelLocator));
         //waitForVisibility(addToCartButton);
     }
     
     public String getProductName()
     {
-        return titleLabel.getText();
+        return driver.findElement(titleLabelLocator).getText();
     }
 
     public String getProductPrice() throws InterruptedException 

@@ -24,6 +24,12 @@ public abstract class PageBase
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+    public void waitForInvisibility(WebElement element)
+    {
+        WebDriverWait wait = new WebDriverWait(driver, TestUtils.WAIT);
+        wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
     public void click(WebElement element)
     {
         waitForVisibility(element);

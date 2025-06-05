@@ -52,6 +52,7 @@ mv Appium-Inspector-2024.9.1-linux-x86_64.AppImage /usr/local/appium-inspector/a
   "appium:appWaitActivity": "com.saucelabs.mydemoapp.android.view.activities.MainActivity"
 }
 ```
+Run Appium Inspector: `/usr/local/appium-inspector/appium-inspector.AppImage --no-sandbox`.
 
 ### Find appPackage and appActivityName [5]
 * Start the app in the Android device and execute the commands below:
@@ -90,7 +91,6 @@ mvn --version
 export ANDROID_HOME=~/Android/Sdk/
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 appium
-/usr/local/appium-inspector/appium-inspector.AppImage --no-sandbox
 mvn clean test -DsuiteXmlFilePath=src/test/resources/AppiumDemoAppTest.xml
 mvn clean test -DsuiteXmlFilePath=src/test/resources/SauceLabsDemoAppTest.xml
 ```
