@@ -1,11 +1,10 @@
 package com.qa.tests;
 
 import java.net.MalformedURLException;
-import java.net.URI;
 import java.net.URISyntaxException;
 import org.testng.annotations.*;
+import com.qa.utils.DriverManager;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.options.UiAutomator2Options;
 
 public abstract class TestBase 
 {
@@ -36,18 +35,9 @@ public abstract class TestBase
         String appLocation, String appiumURL, String appPackage, String appWaitActivity) 
         throws URISyntaxException, MalformedURLException
     {
-        UiAutomator2Options options = new UiAutomator2Options()
-            .setAutomationName(automationName)
-            .setPlatformName(platformName)
-            .setApp(appLocation)
-            .setAppPackage(appPackage)
-            .setAppWaitActivity(appWaitActivity)
-            .setUdid(udid);
-
-        driver = new AndroidDriver(
-            new URI(appiumURL).toURL(), 
-            options
-        );
+        driver = DriverManager.getDriver(
+            automationName, platformName, udid, appLocation, 
+            appiumURL, appPackage, appWaitActivity);
     }
 
     @AfterClass

@@ -2,25 +2,24 @@ package com.qa.Hooks;
 
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 @CucumberOptions(
-    features = "src/test/resources/features", 
+    features = "src/test/resources/features/login.feature", 
     glue = "com.qa.steps",
     plugin = {
         "pretty",
         "html:target/cucumber-reports.html",
         "json:target/cucumber-reports/Cucumber.json"
     },
-    monochrome = true,
-    tags = "@login"
+    monochrome = true
+    //tags = "@login"
 )
 
-public class CucumberTestRunner extends AbstractTestNGCucumberTests {
-
+public class CucumberTestRunner extends AbstractTestNGCucumberTests 
+{
     @Test
     public void runCucumber() {
         // Nothing to do...
     }
-
 }

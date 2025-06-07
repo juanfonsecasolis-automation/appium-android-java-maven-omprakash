@@ -13,7 +13,8 @@ public class LoginTests extends TestBase
 {
 
     @DataProvider(name = "logInDataProvider")
-    public Object[][] logInDataProvider() {
+    public Object[][] logInDataProvider() 
+    {
         return new Object[][] {
             { "", "", "Username is required" },
             { "username", "", "Enter Password" },

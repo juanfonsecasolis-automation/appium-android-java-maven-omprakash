@@ -124,3 +124,5 @@ mvn clean test -DsuiteXmlFilePath=src/test/resources/SauceLabsDemoAppTest.xml
 4. TutorialsPoint. Run Specific TestNG Suite with Maven from Command Line. URL: https://www.tutorialspoint.com/how-to-run-specific-testng-suite-with-maven-from-command-line (last consulted on 04/25/24).
 5. Anish. 2 Ways to find appPackage and appActivity name of your App. URL: https://www.automationtestinghub.com/apppackage-and-appactivity-name/ (last consulted on 04/29/24).
 6. Meet Gondaliya. Cucumber BDD testing using TestNG framework. URL: https://medium.com/@mgondaliya1210/cucumber-bdd-testing-using-testng-framework-004c8fb3ce39 (last consulted on 05/28/25).
+7. Lakshay Sharma. Sharing Test Context between Cucumber Step Definitions. ToolsQA. URL: https://toolsqa.com/selenium-cucumber-framework/sharing-test-context-between-cucumber-step-definitions/ (last consulted on 06/05/25).
+8. QA Automation Expert. URL: https://qaautomation.expert/2023/11/08/integration-of-cucumber-with-selenium-and-testng/ (last consulted on 06/06/25).
