@@ -5,15 +5,15 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import org.testng.annotations.*;
 
 @CucumberOptions(
-    features = "src/test/resources/features/login.feature", 
+    features = "src/test/resources/features", 
     glue = "com.qa.steps",
     plugin = {
         "pretty",
         "html:target/cucumber-reports.html",
         "json:target/cucumber-reports/Cucumber.json"
     },
-    monochrome = true
-    //tags = "@login"
+    monochrome = true,
+    tags = "@login"
 )
 
 public class CucumberTestRunner extends AbstractTestNGCucumberTests 

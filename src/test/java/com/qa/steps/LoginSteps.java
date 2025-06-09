@@ -1,7 +1,6 @@
 package com.qa.steps;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.cucumber.java.*;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import org.testng.Assert;
@@ -10,11 +9,12 @@ import com.qa.pages.CatalogPage;
 import com.qa.pages.LogInAttempt;
 import com.qa.pages.LogInPage;
 import com.qa.pages.WithMenuPage.MenuItemType;
+import com.qa.tests.TestBase;
 import com.qa.utils.DriverManager;
-import cucumber.api.java.Before;
-import cucumber.api.java.en.*;
+import io.cucumber.java.*;
+import io.cucumber.java.en.*;
 
-public class LoginSteps
+public class LoginSteps extends TestBase
 {
     LogInPage logInPage;
     LogInAttempt logInAttempt;
@@ -28,7 +28,7 @@ public class LoginSteps
             .getCurrentXmlTest().getParameter(parameterName);       
     }
 
-    /*@BeforeAll
+    @BeforeAll
     public static void setUp() throws URISyntaxException, MalformedURLException
     {
         appPackage = getTestngParameter("appPackage");
@@ -59,24 +59,24 @@ public class LoginSteps
     public static void teardown()
     {
         driver.quit();
-    }*/
+    }
 
     @Given("user navigates to the login page")
     public void navigateToLoginPage() throws Exception 
     {
-        /*CatalogPage catalogPage = new CatalogPage(driver);
-        logInPage = (LogInPage) catalogPage.openMenuItem(MenuItemType.LogIn);*/
+        CatalogPage catalogPage = new CatalogPage(driver);
+        logInPage = (LogInPage) catalogPage.openMenuItem(MenuItemType.LogIn);
     }
 
-    @When("user tries to log in using username \"{string}\" and password \"{string}\"")
+    @When("user tries to log in using username {string} and password {string}")
     public void enterValidCredentials(String username, String password) 
     {
-        //logInAttempt = logInPage.logIn(username, password);
+        logInAttempt = logInPage.logIn(username, password);
     }
 
-    @Then("user receives error message \"{string}\"")
+    @Then("user receives error message {string}")
     public void verifyRedirection(String expectedErrorMessage) 
     {
-        //Assert.assertEquals(expectedErrorMessage, logInAttempt.errors.get(0));
+        Assert.assertEquals(expectedErrorMessage, logInAttempt.errors.get(0));
     }
 }
