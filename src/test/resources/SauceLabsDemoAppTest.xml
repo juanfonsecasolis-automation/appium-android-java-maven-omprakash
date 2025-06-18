@@ -15,7 +15,7 @@
             <!--class name="com.qa.tests.sauceLabsDemoApp.MenuTests"/-->
             <!--class name="com.qa.tests.sauceLabsDemoApp.LoginTests"/-->
             <!--class name="com.qa.tests.sauceLabsDemoApp.CatalogTests"/-->
-            <class name="com.qa.Hooks.CucumberTestRunner"/>
+            <class name="com.qa.hooks.CucumberTestRunner"/>
         </classes>
     </test>
 </suite>

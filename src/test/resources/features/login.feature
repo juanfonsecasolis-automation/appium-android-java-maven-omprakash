@@ -9,4 +9,4 @@ Scenario: Verify error message is displayed when I enter incomplete credentials
     Examples:
     | username  | password  | errorMessage          |
     |           |           | Username is required  |
-    #| username  |           | Enter Password        |
+    | username  |           | Enter Password        |

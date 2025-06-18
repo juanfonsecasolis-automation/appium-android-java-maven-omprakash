@@ -1,4 +1,4 @@
-package com.qa.Hooks;
+package com.qa.hooks;
 
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -6,7 +6,10 @@ import org.testng.annotations.*;
 
 @CucumberOptions(
     features = "src/test/resources/features", 
-    glue = "com.qa.steps",
+    glue = {
+        "com.qa.steps",
+        "com.qa.hooks"
+    },
     plugin = {
         "pretty",
         "html:target/cucumber-reports.html",
