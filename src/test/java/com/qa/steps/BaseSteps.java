@@ -10,7 +10,7 @@ public class BaseSteps
 
     public BaseSteps()
     {
-        this.driver = Hooks.driver;
+        this.driver = Hooks.androidDriver;
         this.appPackage = Hooks.appPackage;
     }
 }

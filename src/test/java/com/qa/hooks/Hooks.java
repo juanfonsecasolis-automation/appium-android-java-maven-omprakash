@@ -1,6 +1,7 @@
 package com.qa.hooks;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import org.testng.Reporter;
@@ -8,11 +9,13 @@ import com.qa.utils.DriverManager;
 import io.cucumber.java.*;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
+import java.io.File;
 
 public class Hooks 
 {
-    public static AndroidDriver driver;
+    public static AndroidDriver androidDriver;
     public static String appPackage;
+    static AppiumDriverLocalService appiumServer;
 
     static String getTestngParameter(String parameterName)
     {
@@ -23,8 +26,13 @@ public class Hooks
     @BeforeAll
     public static void setUp() throws URISyntaxException, MalformedURLException
     {
+        // initialize the appium server
+        appiumServer = AppiumDriverLocalService.buildDefaultService();
+        appiumServer.start();
+
+        // initialize web driver
         appPackage = getTestngParameter("appPackage");
-        driver = DriverManager.getDriver(
+        androidDriver = DriverManager.getDriver(
                 getTestngParameter("automationName"), 
                 getTestngParameter("platformName"), 
                 getTestngParameter("udid"), 
@@ -35,21 +43,22 @@ public class Hooks
             );
     }
 
+    @AfterAll
+    public static void teardown()
+    {
+        androidDriver.quit();
+        appiumServer.close();
+    }
+
     @Before
     public void beforeScenario(Scenario scenario)
     {
-        driver.activateApp(appPackage);
+        androidDriver.activateApp(appPackage);
     }
 
     @After
     public void afterScenario(Scenario scenario)
     {
-        driver.terminateApp(appPackage);
-    }
-
-    @AfterAll
-    public static void teardown()
-    {
-        driver.quit();
+        androidDriver.terminateApp(appPackage);
     }
 }
